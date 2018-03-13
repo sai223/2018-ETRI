@@ -1,0 +1,15 @@
+main.0.weight
+main.0.bias
+main.2.weight
+main.2.bias
+main.4.weight
+main.4.bias
+main.6.weight
+main.6.bias
+main.8.weight
+main.8.bias
+main.10.weight
+main.10.bias
+conv1.weight
+conv2.weight
+

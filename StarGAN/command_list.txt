@@ -1,0 +1,11 @@
+
+CUDA_VISIBLE_DEVICES=0 python3 main.py --mode='train' --dataset='CelebA' --c_dim=3 --image_size=128 --sample_path='stargan_center_avg_s/samples' --log_path='stargan_center_avg_s/logs' --model_save_path='stargan_center_avg_s/models' --result_path='stargan_center_avg_s/results' --num_epochs=1000 --use_tensorboard=True --celebA_image_path=/home/khsunkh/data_center_avg --metadata_path=/home/khsunkh/data_center_avg/list_attr_data_center_avg.txt --fine_tune='N'
+
+CUDA_VISIBLE_DEVICES=1 python3 main.py --mode='train' --dataset='CelebA' --c_dim=3 --image_size=128 --sample_path='stargan_center_s/samples' --log_path='stargan_center_s/logs' --model_save_path='stargan_center_s/models' --result_path='stargan_center_s/results' --num_epochs=1000 --use_tensorboard=True --celebA_image_path=/home/khsunkh/data_center --metadata_path=/home/khsunkh/data_center/list_attr_data_center.txt --fine_tune='N'
+
+CUDA_VISIBLE_DEVICES=2 python3 main.py --mode='train' --dataset='CelebA' --c_dim=3 --image_size=128 --sample_path='stargan_center_avg/samples' --log_path='stargan_center_avg/logs' --model_save_path='stargan_center_avg/models' --result_path='stargan_center_avg/results' --num_epochs=1000 --use_tensorboard=True --celebA_image_path=/home/khsunkh/data_center_avg --metadata_path=/home/khsunkh/data_center_avg/list_attr_data_center_avg.txt --fine_tune='Y' --pretrained_model='20_12000' --pretrained_model_path='/home/khsunkh/StarGAN/stargan_celebA/models/'
+
+CUDA_VISIBLE_DEVICES=3 python3 main.py --mode='train' --dataset='CelebA' --c_dim=3 --image_size=128 --sample_path='stargan_center/samples' --log_path='stargan_center/logs' --model_save_path='stargan_center/models' --result_path='stargan_center/results' --num_epochs=1000 --use_tensorboard=True --celebA_image_path=/home/khsunkh/data_center --metadata_path=/home/khsunkh/data_center/list_attr_data_center.txt --fine_tune='Y' --pretrained_model='20_12000' --pretrained_model_path='/home/khsunkh/StarGAN/stargan_celebA/models/'
+
+python3 /usr/local/lib/python3.5/dist-packages/tensorboard/main.py --logdir=/home/khsunkh/kihong/StarGAN/stargan_center_avg/logs --port=8008
+

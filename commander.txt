@@ -1,0 +1,33 @@
+
+---------------CelebA-----------------
+
+python3 main.py --mode='train' --dataset='CelebA' --c_dim=3 --image_size=128 --sample_path='stargan_celebAabc/samples' --log_path='stargan_celebAabc/logs' --model_save_path='stargan_celebAabc/models' --pretrained_model_path='/home/khsunkh/StarGAN/stargan_celebA/models/' --pretrained_model='20_12000' --fine_tune='Y' 
+
+--use_tensorboard=True
+--sample_step=???
+--model_save_step=???
+
+
+----------------RaFD-------------------
+python3 main.py --mode='train' --dataset='RaFD' --c_dim=3 --image_size=128 --num_epochs=200 --num_epochs_decay=100 --sample_step=200 --model_save_step=200 --sample_path='stargan_rafd/samples' --log_path='stargan_rafd/logs' --model_save_path='stargan_rafd/models' --result_path='stargan_rafd/results' --rafd_image_path='/home/khsunkh/kihong/trash/data_center'
+
+CUDA_VISIBLE_DEVICES=0 python3 main.py --mode='train' --dataset='RaFD' --c_dim=2 --image_size=128 --num_epochs=500 --num_epochs_decay=100 --sample_step=170 --model_save_step=50 --sample_path='/media/khsunkh/50A268B4A268A068/kihong/stargan_conv_add_500/samples/' --log_path='/media/khsunkh/50A268B4A268A068/kihong/stargan_conv_add_500/logs' --model_save_path='/media/khsunkh/50A268B4A268A068/kihong/stargan_conv_add_500/models' --result_path='/media/khsunkh/50A268B4A268A068/kihong/stargan_conv_add_500/results' --rafd_image_path='/home/khsunkh/kihong/second_dataset/train' --pretrained_model_path='/home/khsunkh/StarGAN/stargan_conv_add_500/models/' --pretrained_model='281_170'
+
+
+--------------TEST RAFD------------------------------------
+CUDA_VISIBLE_DEVICES=0 python main.py --mode='test' --dataset='RaFD' --c_dim=2 --image_size=128 --test_model='200_200' --rafd_image_path='data/RaFD/test' --sample_path='stargan_rafd/samples' --log_path='stargan_rafd/logs' --model_save_path='stargan_rafd/models' --result_path='stargan_rafd/results'
+
+CUDA_VISIBLE_DEVICES=0 python3 main.py --mode='test' --dataset='RaFD' --c_dim=2 --image_size=128 --test_model='300_85' --rafd_image_path='/home/khsunkh/kihong/test_dataset' --sample_path='stargan_rafd/samples' --log_path='stargan_rafd/logs' --pretrained_model_path='/media/khsunkh/50A268B4A268A068/kihong/stargan_conv_300_32/models' --result_path='/media/khsunkh/50A268B4A268A068/kihong/stargan_conv_300_32/results'
+
+
+
+
+
+
+
+
+
+
+
+
+
